@@ -16,7 +16,8 @@ sql_insert = 'insert into informacoes values (?, ?, ?)'
 recset = [
     ('Simonelima@gmail.com','Simone', 987852209),
     ('Alycialima@gmail.com','Alycia', 985623547),
-    ('Samarasantos@gmail.com','Samara', 936547852)
+    ('Samarasantos@gmail.com','Samara', 936547852),
+    ('Santos@gmail.com','Santos', 936533852)
 ]
 for rec in recset:
     cur.execute(sql_insert, rec)
