@@ -21,4 +21,11 @@ recset = [
 ]
 for rec in recset:
     cur.execute(sql_insert, rec)
+def create_table():
+    cur.execute('CREATE TABLE IF NOT EXITIS produtos(id INTERGER PRIMARY KEY AUTOINCREMENT NOT NULL, date TEXT, '\
+        'prod_name TEXT, valor REAL)')
+def data_insert():
+    cur.execute("INSERT INTO produtos VALUES(10, '2020-05-02 14:32:11', 'teclado', 90)")
 con.commit()
+cur.close()
+con.close()
