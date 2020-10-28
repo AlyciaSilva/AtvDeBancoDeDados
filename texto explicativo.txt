@@ -1,0 +1,4 @@
+o banco faculdade possui quatro tabelas: alunos, cursando, disciplina e notas. A primeira tabela contem 6 atributos, sendo o primeiro a chave primaria matricula do tipo integer, a segunda com 3 atributos id sendo primary key, matricula e codigo cadeira como chave estrangeira, a terceira tabela tem 4 atributos: codigo cadeira do tipo primary key, nome como chave estrangeira e carga horária e professor. A quarta e ultima tabela tem 3 atributos, id aluno como primary key e matricula aluno como chave estrangeira e o ultimo atributo que é o nota. todos os atributos das tabelas receberam o not null para que o usuário seja obrigado a preenher todos os campos; As ligações entre tabelas são: 
+alunos: matricula PK com FK matricula na tabela cursando.
+disciplinas: código cadeira PK com FK código da tabela cursando 
+E código cadeira PK com matricula do aluno na tabela notas.
