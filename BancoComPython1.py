@@ -22,7 +22,8 @@ recset = [
     (13620444447, 'Simone', 22),
     (13620444445,'Alycia', 17),
     (13620456447,'Samara', 52),
-    (13880444447,'Santos', 20)
+    (13880444447,'Santos', 20),
+    (13880444487,'Samuel', 60)
 ]
 for rec in recset:
     cur.execute(sql_insert, rec)
@@ -48,3 +49,9 @@ def consulta_da_coluna_cpf():
     cur.execute("SELECT * FROM cadastro")
     for linha in cur.fetchall():
         print(linha[0]) 
+def atualizando_dados():
+    cur.execute("UPDATE produtos SET idade = 50 WHERE idade = 52")
+    con.commit()
+def removendo_dados():
+    cur.execute("DELETE FROM cadastro WHERE idade = 20")
+    con.commit()
